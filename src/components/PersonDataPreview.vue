@@ -11,7 +11,7 @@
           {{ item.name }}, {{ item.age }} лет
       </div>
 
-      <!--дети-->
+      <!--Список детей-->
       <div v-if="item.childs.length > 0">
         <p>Дети</p>
         <PersonDataChildPreview
