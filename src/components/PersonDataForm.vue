@@ -1,6 +1,6 @@
 <template>
   <div class="person_data">
-    <!--Форма персональные данные-->
+    <!--Форма персональных данных-->
     <div class="form">
       <p class="form_title">Персональные данные</p>
       <InputText 
@@ -14,7 +14,7 @@
       />
     </div>
 
-    <!---кнопка для добавление детей-->
+    <!---Кнопка для добавление детей-->
     <button 
       v-if="showAddChildButton"
       class="button_create-child"
@@ -26,7 +26,7 @@
       Добавить ребенка
     </button>
 
-    <!---Дети-->
+    <!---Список детей-->
     <div 
       class="person_childs"
       v-if="!isEmptyChilds"
@@ -40,7 +40,7 @@
       />
     </div>  
     
-    <!--Сообщение ошибки-->
+    <!--Сообщение об ошибке-->
     <p class="error">{{ error.text }}</p>
     <!--кнопка сохранить-->
     <button
@@ -120,7 +120,7 @@ export default {
       })
     },
 
-    /* Валидатция, если даже одно поле не заполнено возвращает false*/
+    /* Валидация, если даже одно поле не заполнено возвращает false*/
     validateForm (data) {
        let validate = true
 
